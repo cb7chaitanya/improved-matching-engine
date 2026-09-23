@@ -7,9 +7,9 @@ use std::sync::atomic::{AtomicU64, Ordering::Relaxed};
 use std::time::Instant;
 
 use hdrhistogram::Histogram;
-use omnibook::book::FastBook;
-use omnibook::types::*;
-use omnibook::workload::{Op, Rng, Workload};
+use matching_engine::book::FastBook;
+use matching_engine::types::*;
+use matching_engine::workload::{Op, Rng, Workload};
 
 struct Counting;
 static ALLOCS: AtomicU64 = AtomicU64::new(0);
@@ -263,7 +263,7 @@ fn main() {
         ..Config::binary_cents(1 << 16)
     };
 
-    println!("omnibook latency benchmark — service time of FastBook::process, nanoseconds");
+    println!("latency benchmark — service time of FastBook::process, nanoseconds");
     println!("timer resolution on this machine: see note in source (41.67 ns on Apple Silicon)");
 
     let stream = record(cfg, ops, 1, target_live);

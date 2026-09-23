@@ -1,4 +1,4 @@
-# omnibook
+# matching-engine
 
 A single-book matching engine for binary event contracts (prices 1–99¢): limit (GTC/IOC),
 market (with absolute protection), post-only, cancel, reduce and replace. Deterministic,

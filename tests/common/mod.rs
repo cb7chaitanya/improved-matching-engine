@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 
-use omnibook::types::*;
+use matching_engine::types::*;
 use proptest::prelude::*;
 
 #[derive(Clone, Debug)]

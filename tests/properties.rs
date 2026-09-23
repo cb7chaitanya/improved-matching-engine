@@ -3,9 +3,9 @@ mod common;
 use std::collections::HashSet;
 
 use common::{Profile, Step, cents, envelope, record_issued, step, tiny};
-use omnibook::audit::Audit;
-use omnibook::reference::Reference;
-use omnibook::types::*;
+use matching_engine::audit::Audit;
+use matching_engine::reference::Reference;
+use matching_engine::types::*;
 use proptest::prelude::*;
 use proptest::strategy::ValueTree;
 use proptest::test_runner::TestRunner;
