@@ -1,0 +1,15 @@
+[package]
+name = "omnibook"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+hdrhistogram = "7.6.0"
+
+[dev-dependencies]
+proptest = "1.11.0"
+
+# 012: a halt must stop the process, not unwind through half-updated book state.
+[profile.release]
+panic = "abort"
+debug = true
